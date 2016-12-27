@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,6 +18,7 @@ package com.muinv.selfplan.di.components;
 import com.muinv.selfplan.di.PerActivity;
 import com.muinv.selfplan.di.modules.ActivityModule;
 import com.muinv.selfplan.di.modules.UserModule;
+import com.muinv.selfplan.view.activity.SelfPlanActivity;
 import com.muinv.selfplan.view.fragment.UserDetailsFragment;
 import com.muinv.selfplan.view.fragment.UserListFragment;
 import dagger.Component;
@@ -27,8 +28,11 @@ import dagger.Component;
  * Injects user specific Fragments.
  */
 @PerActivity
-@Component(dependencies = ApplicationComponent.class, modules = {ActivityModule.class, UserModule.class})
+@Component(dependencies = ApplicationComponent.class, modules = {
+        ActivityModule.class, UserModule.class
+})
 public interface UserComponent extends ActivityComponent {
-  void inject(UserListFragment userListFragment);
-  void inject(UserDetailsFragment userDetailsFragment);
+    void inject(UserListFragment userListFragment);
+
+    void inject(UserDetailsFragment userDetailsFragment);
 }

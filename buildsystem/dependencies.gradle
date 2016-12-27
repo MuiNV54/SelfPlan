@@ -6,10 +6,10 @@ allprojects {
 
 ext {
   //Android
-  androidBuildToolsVersion = "23.0.1"
+  androidBuildToolsVersion = "23.0.3"
   androidMinSdkVersion = 15
-  androidTargetSdkVersion = 21
-  androidCompileSdkVersion = 21
+  androidTargetSdkVersion = 23
+  androidCompileSdkVersion = 23
 
   //Libraries
   daggerVersion = '2.0.2'
@@ -42,6 +42,8 @@ ext {
       recyclerView:       "com.android.support:recyclerview-v7:${recyclerViewVersion}",
       rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
       rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
+      appCompatV7:        "com.android.support:appcompat-v7:23.4.0",
+      supportDesign:      "com.android.support:design:23.4.0",
       javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
   ]
 
