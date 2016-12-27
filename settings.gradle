@@ -1,3 +1,3 @@
-include ':presentation'
+include ':selfplan'
 include ':domain'
 include ':data'
