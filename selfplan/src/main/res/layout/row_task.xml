@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <com.muinv.selfplan.view.custom.CornerButton
+        android:id="@+id/row_task_icon"
+        android:layout_width="@dimen/row_task_icon_size"
+        android:layout_height="@dimen/row_task_icon_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/padding_large"
+        android:gravity="center"
+        android:text="H"
+        android:textColor="@color/white"
+        android:textSize="@dimen/row_task_icon_txt"
+        android:textStyle="bold"
+        app:bgColor="@color/colorPrimary"
+        app:corner="@dimen/max_size"
+        />
+
+    <TextView
+        android:id="@+id/row_task_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_toRightOf="@+id/row_task_icon"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/french_gray"
+        android:textSize="@dimen/txt_normal"
+        />
+
+    <TextView
+        android:id="@+id/row_task_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_task_content"
+        android:layout_toRightOf="@+id/row_task_icon"
+        android:maxLines="2"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/scorpion"
+        android:textSize="@dimen/txt_normal"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_toRightOf="@+id/row_task_icon"
+        android:background="@color/french_gray"
+        android:paddingLeft="@dimen/padding_small"
+        />
+</RelativeLayout>

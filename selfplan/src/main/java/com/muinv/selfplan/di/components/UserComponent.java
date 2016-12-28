@@ -19,6 +19,7 @@ import com.muinv.selfplan.di.PerActivity;
 import com.muinv.selfplan.di.modules.ActivityModule;
 import com.muinv.selfplan.di.modules.UserModule;
 import com.muinv.selfplan.view.activity.SelfPlanActivity;
+import com.muinv.selfplan.view.fragment.TodayFragment;
 import com.muinv.selfplan.view.fragment.UserDetailsFragment;
 import com.muinv.selfplan.view.fragment.UserListFragment;
 import dagger.Component;
@@ -35,4 +36,6 @@ public interface UserComponent extends ActivityComponent {
     void inject(UserListFragment userListFragment);
 
     void inject(UserDetailsFragment userDetailsFragment);
+
+    void inject(TodayFragment todayFragment);
 }

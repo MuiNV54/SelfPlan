@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CornerButton">
+        <attr format="color" name="bgColor"/>
+        <attr format="color" name="bgColorSelected"/>
+        <attr format="color" name="bgColorDisabled"/>
+        <attr format="dimension" name="corner"/>
+        <attr format="boolean" name="selected"/>
+        <attr format="dimension" name="cornerStrokeWidth"/>
+        <attr format="color" name="cornerStrokeColor"/>
+        <attr format="integer" name="bgDrawable"/>
+    </declare-styleable>
+</resources>
