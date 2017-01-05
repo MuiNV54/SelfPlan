@@ -16,6 +16,7 @@
 package com.muinv.selfplan;
 
 import android.app.Application;
+import com.activeandroid.ActiveAndroid;
 import com.muinv.selfplan.di.components.ApplicationComponent;
 import com.muinv.selfplan.di.components.DaggerApplicationComponent;
 import com.muinv.selfplan.di.modules.ApplicationModule;
@@ -26,27 +27,29 @@ import com.squareup.leakcanary.LeakCanary;
  */
 public class AndroidApplication extends Application {
 
-  private ApplicationComponent applicationComponent;
+    private ApplicationComponent applicationComponent;
 
-  @Override public void onCreate() {
-    super.onCreate();
-    this.initializeInjector();
-    this.initializeLeakDetection();
-  }
-
-  private void initializeInjector() {
-    this.applicationComponent = DaggerApplicationComponent.builder()
-        .applicationModule(new ApplicationModule(this))
-        .build();
-  }
-
-  public ApplicationComponent getApplicationComponent() {
-    return this.applicationComponent;
-  }
-
-  private void initializeLeakDetection() {
-    if (BuildConfig.DEBUG) {
-      LeakCanary.install(this);
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        ActiveAndroid.initialize(this);
+        this.initializeInjector();
+        this.initializeLeakDetection();
     }
-  }
+
+    private void initializeInjector() {
+        this.applicationComponent = DaggerApplicationComponent.builder()
+                .applicationModule(new ApplicationModule(this))
+                .build();
+    }
+
+    public ApplicationComponent getApplicationComponent() {
+        return this.applicationComponent;
+    }
+
+    private void initializeLeakDetection() {
+        if (BuildConfig.DEBUG) {
+            LeakCanary.install(this);
+        }
+    }
 }

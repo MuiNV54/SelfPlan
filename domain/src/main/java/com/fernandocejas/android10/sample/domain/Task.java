@@ -1,17 +1,17 @@
-package com.muinv.selfplan.model;
+package com.fernandocejas.android10.sample.domain;
 
 /**
  * Created by FRAMGIA\nguyen.van.mui on 27/12/2016.
  */
 
-public class TaskModel {
+public class Task {
     private long id;
     private int amount;
     private String description;
     private boolean descrease;
-    private CategoryModel categoryModel;
+    private Category category;
 
-    public TaskModel(long id) {
+    public Task(long id) {
         this.id = id;
     }
 
@@ -43,11 +43,11 @@ public class TaskModel {
         this.descrease = descrease;
     }
 
-    public CategoryModel getCategoryModel() {
-        return categoryModel;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryModel(CategoryModel categoryModel) {
-        this.categoryModel = categoryModel;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

@@ -18,6 +18,7 @@ package com.muinv.selfplan.di.components;
 import android.content.Context;
 import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
 import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
+import com.fernandocejas.android10.sample.domain.repository.TaskRepository;
 import com.fernandocejas.android10.sample.domain.repository.UserRepository;
 import com.muinv.selfplan.di.modules.ApplicationModule;
 import com.muinv.selfplan.view.activity.BaseActivity;
@@ -37,4 +38,5 @@ public interface ApplicationComponent {
   ThreadExecutor threadExecutor();
   PostExecutionThread postExecutionThread();
   UserRepository userRepository();
+  TaskRepository taskRepository();
 }

@@ -16,12 +16,16 @@
 package com.muinv.selfplan.di.modules;
 
 import android.content.Context;
+import com.fernandocejas.android10.sample.data.cache.TaskCache;
+import com.fernandocejas.android10.sample.data.cache.TaskCacheImpl;
 import com.fernandocejas.android10.sample.data.cache.UserCache;
 import com.fernandocejas.android10.sample.data.cache.UserCacheImpl;
 import com.fernandocejas.android10.sample.data.executor.JobExecutor;
+import com.fernandocejas.android10.sample.data.repository.TaskDataRepository;
 import com.fernandocejas.android10.sample.data.repository.UserDataRepository;
 import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
 import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
+import com.fernandocejas.android10.sample.domain.repository.TaskRepository;
 import com.fernandocejas.android10.sample.domain.repository.UserRepository;
 import com.muinv.selfplan.AndroidApplication;
 import com.muinv.selfplan.UIThread;
@@ -68,5 +72,17 @@ public class ApplicationModule {
     @Singleton
     UserRepository provideUserRepository(UserDataRepository userDataRepository) {
         return userDataRepository;
+    }
+
+    @Provides
+    @Singleton
+    TaskCache provideTaskCache(TaskCacheImpl taskCache) {
+        return taskCache;
+    }
+
+    @Provides
+    @Singleton
+    TaskRepository provideTaskRepository(TaskDataRepository taskDataRepository) {
+        return taskDataRepository;
     }
 }
