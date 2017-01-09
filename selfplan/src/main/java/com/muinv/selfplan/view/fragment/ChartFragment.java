@@ -7,12 +7,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import butterknife.ButterKnife;
 import com.muinv.selfplan.R;
+import com.muinv.selfplan.view.activity.SelfPlanActivity;
 
 /**
  * Created by FRAMGIA\nguyen.van.mui on 27/12/2016.
  */
 
 public class ChartFragment extends BaseSupportFragment {
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,

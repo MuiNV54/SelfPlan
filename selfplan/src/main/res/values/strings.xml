@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android Clean Architecture</string>
+    <string name="app_name">Personal Goal</string>
     <string name="url">http://www.android10.org/</string>
 
     <string name="activity_title_user_list">Users List</string>
@@ -21,5 +21,6 @@
     <string name="exception_message_user_not_found">Cannot retrieve user data. Check your internet connection</string>
 
     <!--self plan screen-->
-    <string name="self_plan_title">Self Plan</string>
+    <string name="self_plan_title">Personal Goal</string>
+    <string name="category">Category</string>
 </resources>

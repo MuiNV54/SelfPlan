@@ -13,6 +13,13 @@ import com.muinv.selfplan.R;
  */
 
 public class CalendarFragment extends BaseSupportFragment {
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
